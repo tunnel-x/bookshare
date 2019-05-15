@@ -11,7 +11,8 @@ class Borrow extends Component {
             name: '', 
             surname: '',
             email: '',
-            tool: '',
+            book: '',
+            shelf: '',
             phone: '',
             history: {},
         };
@@ -122,8 +123,8 @@ class Borrow extends Component {
                     <input className="form-input" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                 </div>  
                 <div className="form-line">
-                    <label className="form-label">Tool Name :</label> 
-                    <input className="form-input" type="text" name="tool" value={this.state.tool} onChange={this.handleChange} />
+                    <label className="form-label">Book Name :</label> 
+                    <input className="form-input" type="text" name="book" value={this.state.book} onChange={this.handleChange} />
                 </div>  
                 <div className="form-line">
                     <label className="form-label">Phone Number :</label> 

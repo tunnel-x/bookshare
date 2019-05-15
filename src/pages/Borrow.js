@@ -11,7 +11,8 @@ class Borrow extends Component {
             name: '', 
             surname: '',
             email: '',
-            tool: '',
+            book: '',
+            shelf: '',
             phone: '',
             history: {},
         };
@@ -42,16 +43,16 @@ class Borrow extends Component {
         borrow.name = this.state.name;
         borrow.surname = this.state.surname;
         borrow.email = this.state.email;
-        borrow.tool = this.state.tool;
+        borrow.book = this.state.book;
         borrow.phone = this.state.phone;
         if ( borrow.name === '' ||
             borrow.surname === '' ||
             borrow.email === '' ||
-            borrow.tool === '' ||
+            borrow.book === '' ||
             borrow.phone === '' ) {
                 return;
         }
-        this.setState({tool: ''});
+        this.setState({book: ''});
         fetch(url, { // optional fetch options
             body: JSON.stringify(borrow), 
             headers: {
@@ -122,7 +123,7 @@ class Borrow extends Component {
                     <input className="form-input" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
                 </div>  
                 <div className="form-line">
-                    <label className="form-label">Tool Name :</label> 
+                    <label className="form-label">Book Name :</label> 
                     <input className="form-input" type="text" name="tool" value={this.state.tool} onChange={this.handleChange} />
                 </div>  
                 <div className="form-line">
